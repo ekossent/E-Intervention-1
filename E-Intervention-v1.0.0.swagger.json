@@ -18,11 +18,40 @@
 				"security": [
 					{
 						"declarerAccesOCHorsService_OI_auth": [
-							"EXT_InterventionOiManage"
 						]
 					}
 				],
 				"parameters": [
+					{
+						"name": "trackerId",
+						"required": false,
+						"description": "Navigation Unique Identifier",
+						"in": "header",
+						"schema": {
+							"type": "string",
+							"maxLength": 36
+						}
+					},
+					{
+						"name": "x-request-id",
+						"required": false,
+						"description": "Request Identifier",
+						"in": "header",
+						"schema": {
+							"type": "string",
+							"maxLength": 36
+						}
+					},
+					{
+						"name": "x-source",
+						"required": false,
+						"description": "Consumer application name",
+						"in": "header",
+						"schema": {
+							"type": "string",
+							"maxLength": 64
+						}
+					},
 					{
 						"name": "refIntervOI",
 						"required": true,
@@ -74,16 +103,6 @@
 							}
 						}
 					},
-					"403": {
-						"description": "Forbidden",
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/DeclarerAccesOCHorsService_OI403Response"
-								}
-							}
-						}
-					},
 					"500": {
 						"description": "An Error occurred on the server side",
 						"content": {
@@ -110,11 +129,40 @@
 				"security": [
 					{
 						"creerInterventionOI_auth": [
-							"EXT_InterventionOiManage"
 						]
 					}
 				],
 				"parameters": [
+					{
+						"name": "trackerId",
+						"required": false,
+						"description": "Navigation Unique Identifier",
+						"in": "header",
+						"schema": {
+							"type": "string",
+							"maxLength": 36
+						}
+					},
+					{
+						"name": "x-request-id",
+						"required": false,
+						"description": "Request Identifier",
+						"in": "header",
+						"schema": {
+							"type": "string",
+							"maxLength": 36
+						}
+					},
+					{
+						"name": "x-source",
+						"required": false,
+						"description": "Consumer application name",
+						"in": "header",
+						"schema": {
+							"type": "string",
+							"maxLength": 64
+						}
+					}
 				],
 				"requestBody": {
 					"content": {
@@ -158,16 +206,6 @@
 							}
 						}
 					},
-					"403": {
-						"description": "Forbidden",
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/CreerInterventionOI403Response"
-								}
-							}
-						}
-					},
 					"500": {
 						"description": "An Error occurred on the server side",
 						"content": {
@@ -194,11 +232,40 @@
 				"security": [
 					{
 						"notifierInterventionOI_auth": [
-							"EXT_InterventionOiConsult"
 						]
 					}
 				],
 				"parameters": [
+					{
+						"name": "trackerId",
+						"required": false,
+						"description": "Navigation Unique Identifier",
+						"in": "header",
+						"schema": {
+							"type": "string",
+							"maxLength": 36
+						}
+					},
+					{
+						"name": "x-request-id",
+						"required": false,
+						"description": "Request Identifier",
+						"in": "header",
+						"schema": {
+							"type": "string",
+							"maxLength": 36
+						}
+					},
+					{
+						"name": "x-source",
+						"required": false,
+						"description": "Consumer application name",
+						"in": "header",
+						"schema": {
+							"type": "string",
+							"maxLength": 64
+						}
+					}
 				],
 				"requestBody": {
 					"content": {
@@ -239,16 +306,6 @@
 							}
 						}
 					},
-					"403": {
-						"description": "Forbidden",
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/NotifierInterventionOI403Response"
-								}
-							}
-						}
-					},
 					"500": {
 						"description": "An Error occurred on the server side",
 						"content": {
@@ -275,11 +332,40 @@
 				"security": [
 					{
 						"modifierInterventionOI_auth": [
-							"EXT_InterventionOiManage"
 						]
 					}
 				],
 				"parameters": [
+					{
+						"name": "trackerId",
+						"required": false,
+						"description": "Navigation Unique Identifier",
+						"in": "header",
+						"schema": {
+							"type": "string",
+							"maxLength": 36
+						}
+					},
+					{
+						"name": "x-request-id",
+						"required": false,
+						"description": "Request Identifier",
+						"in": "header",
+						"schema": {
+							"type": "string",
+							"maxLength": 36
+						}
+					},
+					{
+						"name": "x-source",
+						"required": false,
+						"description": "Consumer application name",
+						"in": "header",
+						"schema": {
+							"type": "string",
+							"maxLength": 64
+						}
+					},
 					{
 						"name": "refIntervOI",
 						"required": true,
@@ -331,16 +417,6 @@
 							}
 						}
 					},
-					"403": {
-						"description": "Forbidden",
-						"content": {
-							"application/json": {
-								"schema": {
-									"$ref": "#/components/schemas/ModifierInterventionOI403Response"
-								}
-							}
-						}
-					},
 					"500": {
 						"description": "An Error occurred on the server side",
 						"content": {
@@ -361,52 +437,40 @@
 		"securitySchemes": {
 			"creerInterventionOI_auth": {
 				"type": "oauth2",
-				"x-habilitations": [
-				],
 				"flows": {
 					"clientCredentials": {
 						"tokenUrl": "https://oauth2.bouyguestelecom.fr/token",
 						"scopes": {
-							"EXT_InterventionOiManage": ""
 						}
 					}
 				}
 			},
 			"declarerAccesOCHorsService_OI_auth": {
 				"type": "oauth2",
-				"x-habilitations": [
-				],
 				"flows": {
 					"clientCredentials": {
 						"tokenUrl": "https://oauth2.bouyguestelecom.fr/token",
 						"scopes": {
-							"EXT_InterventionOiManage": ""
 						}
 					}
 				}
 			},
 			"modifierInterventionOI_auth": {
 				"type": "oauth2",
-				"x-habilitations": [
-				],
 				"flows": {
 					"clientCredentials": {
 						"tokenUrl": "https://oauth2.bouyguestelecom.fr/token",
 						"scopes": {
-							"EXT_InterventionOiManage": ""
 						}
 					}
 				}
 			},
 			"notifierInterventionOI_auth": {
 				"type": "oauth2",
-				"x-habilitations": [
-				],
 				"flows": {
 					"clientCredentials": {
 						"tokenUrl": "https://oauth2.bouyguestelecom.fr/token",
 						"scopes": {
-							"EXT_InterventionOiConsult": ""
 						}
 					}
 				}
@@ -771,39 +835,6 @@
 					}
 				}
 			},
-			"CreerInterventionOI403Response": {
-				"description": "Description d'une erreur fonctionnelle",
-				"type": "object",
-				"required": [
-					"error"
-				],
-				"properties": {
-					"error": {
-						"description": "Le code erreur permet de discriminer les différentes erreurs",
-						"type": "string",
-						"enum": [
-							"FORBIDDEN"
-						]
-					},
-					"error_description": {
-						"description": "Description de l'erreur, si possible fixe pour un même code erreur",
-						"type": "string",
-						"maxLength": 256
-					},
-					"error_uri": {
-						"description": "L'URI de description de l'erreur",
-						"type": "string"
-					},
-					"error_parameters": {
-						"description": "Les paramètres de l'erreur",
-						"type": "array",
-						"items": {
-							"type": "string",
-							"maxLength": 64
-						}
-					}
-				}
-			},
 			"CreerInterventionOI500Response": {
 				"description": "Description d'une erreur fonctionnelle",
 				"type": "object",
@@ -883,39 +914,6 @@
 						"type": "string",
 						"enum": [
 							"UNAUTHORIZED"
-						]
-					},
-					"error_description": {
-						"description": "Description de l'erreur, si possible fixe pour un même code erreur",
-						"type": "string",
-						"maxLength": 256
-					},
-					"error_uri": {
-						"description": "L'URI de description de l'erreur",
-						"type": "string"
-					},
-					"error_parameters": {
-						"description": "Les paramètres de l'erreur",
-						"type": "array",
-						"items": {
-							"type": "string",
-							"maxLength": 64
-						}
-					}
-				}
-			},
-			"DeclarerAccesOCHorsService_OI403Response": {
-				"description": "Description d'une erreur fonctionnelle",
-				"type": "object",
-				"required": [
-					"error"
-				],
-				"properties": {
-					"error": {
-						"description": "Le code erreur permet de discriminer les différentes erreurs",
-						"type": "string",
-						"enum": [
-							"FORBIDDEN"
 						]
 					},
 					"error_description": {
@@ -1037,39 +1035,6 @@
 					}
 				}
 			},
-			"ModifierInterventionOI403Response": {
-				"description": "Description d'une erreur fonctionnelle",
-				"type": "object",
-				"required": [
-					"error"
-				],
-				"properties": {
-					"error": {
-						"description": "Le code erreur permet de discriminer les différentes erreurs",
-						"type": "string",
-						"enum": [
-							"FORBIDDEN"
-						]
-					},
-					"error_description": {
-						"description": "Description de l'erreur, si possible fixe pour un même code erreur",
-						"type": "string",
-						"maxLength": 256
-					},
-					"error_uri": {
-						"description": "L'URI de description de l'erreur",
-						"type": "string"
-					},
-					"error_parameters": {
-						"description": "Les paramètres de l'erreur",
-						"type": "array",
-						"items": {
-							"type": "string",
-							"maxLength": 64
-						}
-					}
-				}
-			},
 			"ModifierInterventionOI500Response": {
 				"description": "Description d'une erreur fonctionnelle",
 				"type": "object",
@@ -1148,39 +1113,6 @@
 						"type": "string",
 						"enum": [
 							"UNAUTHORIZED"
-						]
-					},
-					"error_description": {
-						"description": "Description de l'erreur, si possible fixe pour un même code erreur",
-						"type": "string",
-						"maxLength": 256
-					},
-					"error_uri": {
-						"description": "L'URI de description de l'erreur",
-						"type": "string"
-					},
-					"error_parameters": {
-						"description": "Les paramètres de l'erreur",
-						"type": "array",
-						"items": {
-							"type": "string",
-							"maxLength": 64
-						}
-					}
-				}
-			},
-			"NotifierInterventionOI403Response": {
-				"description": "Description d'une erreur fonctionnelle",
-				"type": "object",
-				"required": [
-					"error"
-				],
-				"properties": {
-					"error": {
-						"description": "Le code erreur permet de discriminer les différentes erreurs",
-						"type": "string",
-						"enum": [
-							"FORBIDDEN"
 						]
 					},
 					"error_description": {
