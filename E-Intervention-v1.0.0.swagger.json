@@ -18,6 +18,7 @@
 				"security": [
 					{
 						"declarerAccesOCHorsService_OI_auth": [
+							"EXT_InterventionOiManage"
 						]
 					}
 				],
@@ -94,8 +95,8 @@
 						}
 					}
 				},
-				"x-security-in": "VERT",
-				"x-security-out": "VERT"
+				"x-security-in": "DONNEES_DE_TRAFIC",
+				"x-security-out": "DONNEES_DE_TRAFIC"
 			}
 		},
 		"/interventions-oi": {
@@ -109,6 +110,7 @@
 				"security": [
 					{
 						"creerInterventionOI_auth": [
+							"EXT_InterventionOiManage"
 						]
 					}
 				],
@@ -177,8 +179,8 @@
 						}
 					}
 				},
-				"x-security-in": "VERT",
-				"x-security-out": "VERT"
+				"x-security-in": "DONNEES_DE_TRAFIC",
+				"x-security-out": "DONNEES_DE_TRAFIC"
 			}
 		},
 		"/interventions-oi/notification": {
@@ -192,6 +194,7 @@
 				"security": [
 					{
 						"notifierInterventionOI_auth": [
+							"EXT_InterventionOiConsult"
 						]
 					}
 				],
@@ -257,8 +260,8 @@
 						}
 					}
 				},
-				"x-security-in": "VERT",
-				"x-security-out": "VERT"
+				"x-security-in": "DONNEES_DE_TRAFIC",
+				"x-security-out": "DONNEES_DE_TRAFIC"
 			}
 		},
 		"/interventions-oi/{refIntervOI}": {
@@ -272,6 +275,7 @@
 				"security": [
 					{
 						"modifierInterventionOI_auth": [
+							"EXT_InterventionOiManage"
 						]
 					}
 				],
@@ -348,8 +352,8 @@
 						}
 					}
 				},
-				"x-security-in": "VERT",
-				"x-security-out": "VERT"
+				"x-security-in": "DONNEES_DE_TRAFIC",
+				"x-security-out": "DONNEES_DE_TRAFIC"
 			}
 		}
 	},
@@ -360,9 +364,10 @@
 				"x-habilitations": [
 				],
 				"flows": {
-					"implicit": {
-						"authorizationUrl": "https://oauth2.bouyguestelecom.fr/authorize",
+					"clientCredentials": {
+						"tokenUrl": "https://oauth2.bouyguestelecom.fr/token",
 						"scopes": {
+							"EXT_InterventionOiManage": ""
 						}
 					}
 				}
@@ -372,9 +377,10 @@
 				"x-habilitations": [
 				],
 				"flows": {
-					"implicit": {
-						"authorizationUrl": "https://oauth2.bouyguestelecom.fr/authorize",
+					"clientCredentials": {
+						"tokenUrl": "https://oauth2.bouyguestelecom.fr/token",
 						"scopes": {
+							"EXT_InterventionOiManage": ""
 						}
 					}
 				}
@@ -384,9 +390,10 @@
 				"x-habilitations": [
 				],
 				"flows": {
-					"implicit": {
-						"authorizationUrl": "https://oauth2.bouyguestelecom.fr/authorize",
+					"clientCredentials": {
+						"tokenUrl": "https://oauth2.bouyguestelecom.fr/token",
 						"scopes": {
+							"EXT_InterventionOiManage": ""
 						}
 					}
 				}
@@ -396,9 +403,10 @@
 				"x-habilitations": [
 				],
 				"flows": {
-					"implicit": {
-						"authorizationUrl": "https://oauth2.bouyguestelecom.fr/authorize",
+					"clientCredentials": {
+						"tokenUrl": "https://oauth2.bouyguestelecom.fr/token",
 						"scopes": {
+							"EXT_InterventionOiConsult": ""
 						}
 					}
 				}
@@ -1230,12 +1238,12 @@
 		}
 	},
 	"info": {
-		"x-st": "TECNOW",
+		"x-st": "INTEROP",
 		"title": "INTERVENTION",
-		"version": "1.0.19",
+		"version": "1.0.20",
 		"description": "",
 		"contact": {
-			"name": "TECNOW"
+			"name": "INTEROP"
 		}
 	},
 	"tags": [
